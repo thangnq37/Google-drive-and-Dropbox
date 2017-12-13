@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CloudComputer</string>
+    <string name="button_subscribe">Listen for Changes</string>
+    <string name="button_unsubscribe">Stop Listening for Changes</string>
+    <string name="menu_logout">ĐĂNG XUẤT</string>
+    <string name="menu_create_folder">TẠO THƯ MỤC</string>
+
+    <string name="txt_create_folder">Nhập tên thư mục</string>
+    <string name="text_create">Tạo</string>
+    <string name="text_back">Trở về</string>
+
+
+    <string name="menu_delete">Xóa</string>
+    <string name="menu_rename">Đổi tên</string>
+    <string name="txt_menu_listview">Tác vụ</string>
+
+    <string name="menu_edit_file">Sửa tập tin</string>
+    <string name="menu_delete_file">Xóa tập tin</string>
+    <string name="menu_rename_file">Sửa tên</string>
+    <string name="title_activity_main_api">MainApiActivity</string>
+</resources>

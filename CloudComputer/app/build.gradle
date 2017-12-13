@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "dlu.nguyenquocthang.dalat186.cloudcomputer"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // to debug ProGuard rules
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules-debug.pro'
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    //        exclude group: 'com.android.support', module: 'support-annotations'
+    //    })
+    compile('com.google.api-client:google-api-client-android:1.23.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile('com.google.apis:google-api-services-drive:v2-rev280-1.23.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.android.gms:play-services-auth:9.8.0'
+    compile 'com.google.android.gms:play-services-drive:9.8.0'
+    compile 'pub.devrel:easypermissions:0.3.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.whalemare:sheetmenu:1.3.3'
+    //Dropbox
+    compile 'com.dropbox.core:dropbox-core-sdk:3.0.5'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    // picasso 2.5.2 doesn't have OkHttp3 support (although it exists
+    // on master). Must use OkHttp v2 and v3 until new picasso release
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp:okhttp:2.7.5'
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    //    testCompile 'junit:junit:4.12'
+    compile files('libs/dropbox-android-sdk-1.6.3.jar')
+}
+apply plugin: 'com.getkeepsafe.dexcount'
+
+dexcount {
+    format = "list"
+    includeClasses = true
+    includeFieldCount = false
+    orderByMethodCount = true
+}

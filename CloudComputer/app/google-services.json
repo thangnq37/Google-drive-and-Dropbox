@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "500213437077",
+    "project_id": "studious-linker-179108"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500213437077:android:6543bf0f68a0615e",
+        "android_client_info": {
+          "package_name": "dlu.nguyenquocthang.dalat186.cloudcomputer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500213437077-dv5emq330h5g2qnp1603n60h66mp2179.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "500213437077-0m4p01ina2855pg2jq6k3mcl1vhe1bvn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dlu.nguyenquocthang.dalat186.cloudcomputer",
+            "certificate_hash": "9400b617d6e872535ddb48f9e87684a1579c8472"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1jYK-6cMMqDMkiAnKap7nh3VdYiQANHI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

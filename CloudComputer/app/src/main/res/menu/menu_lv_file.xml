@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/edit_file"
+        android:title="@string/menu_edit_file"
+        android:id="@+id/menuEditFile"/>
+    <item
+        android:icon="@drawable/rename"
+        android:title="@string/menu_rename_file"
+        android:id="@+id/menuRenameFile"/>
+    <item
+        android:icon="@drawable/download_d"
+        android:title="Tải"
+        android:id="@+id/menuDownFile"/>
+    <item
+        android:icon="@drawable/delete"
+        android:title="@string/menu_delete_file"
+        android:id="@+id/menuDeleteFile"/>
+
+    <item
+        android:icon="@drawable/content_file_close"
+        android:title="TEST"
+        android:id="@+id/menuTest"/>
+</menu>

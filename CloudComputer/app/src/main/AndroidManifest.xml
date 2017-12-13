@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="dlu.nguyenquocthang.dalat186.cloudcomputer">
+
+    <!-- Xin quyền kết nối internet-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Xin quyền kết nối mạng truy cập-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Xin quyền lấy user người dùng hiện tại có thể vô hiệu hóa các tác vụ-->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Xin quyền ghi file -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Xin quyền đọc file-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GoogleDriveAPI.ListFilesInFolderActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".MainApiActivity" />
+        <activity android:name=".RESTApi.MainDriveApisActivity" android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".DropboxAPI.ListMainDropbox"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name="com.dropbox.core.android.AuthActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <!-- Change this to be db- followed by your app key -->
+                <data android:scheme="db-0xew1mmepo51kx8" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

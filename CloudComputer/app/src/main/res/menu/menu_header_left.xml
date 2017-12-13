@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menuDerectoty"
+        android:title="THƯ MỰC LƯU"
+        />
+
+    <item android:id="@+id/menuLogout"
+        android:title="@string/menu_logout"
+        />
+
+    <item
+        android:id="@+id/menuCreateFile"
+        android:icon="@drawable/upload"
+        android:title="Upload"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuCreateFolder"
+        android:icon="@drawable/folderadd"
+        android:title="@string/menu_create_folder"
+        android:visible="true"
+        app:showAsAction="always" />
+
+
+
+</menu>
